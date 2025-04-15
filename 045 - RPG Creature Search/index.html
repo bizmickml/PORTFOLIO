@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mike's RPG Creature Search Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Mike's RPG Creature Search Project</h1>
+    <div id="container">
+      <label for="search-input">Enter a creature ID or Name to search:</label><input id="search-input" required/>
+      <button id="search-button">Search</button>
+      <div class="divider"></div>
+      <div class="card-container">
+        <table id="creature-card">
+          <tbody id="creature-card-body">
+            <tr><th class="creature-name"><span id="creature-name" class="creature-data"></span></th></tr>
+            <tr><td><span class="label">ID: </span><span id="creature-id" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Weight: </span><span id="weight" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Height: </span><span id="height" class="creature-data"></span></td></tr>
+          </tbody>
+          <tbody id="creature-card-base-stats">  
+            <tr><th><span  id="base-stats">Base Stats:</span></th></tr>
+            <tr><td><span class="label">HP: </span><span id="hp" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Attack: </span><span id="attack" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Defense: </span><span id="defense" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Special Attack: </span><span id="special-attack" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Special Defense: </span><span id="special-defense" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Speed: </span><span id="speed" class="creature-data"></span></td></tr>
+            <tr><td><span class="label">Types: </span><span id="types" class="creature-data"></span></td></tr>
+          </tbody>
+          <tbody id="special-rows">
+            <tr>
+              <td>
+                <div class="special-container">
+                  <span class="label">Special: </span>
+                  <span id="special-name" class="creature-data"></span>
+                  <div id="special-description"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

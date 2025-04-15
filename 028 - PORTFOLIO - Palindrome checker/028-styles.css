@@ -1,0 +1,125 @@
+:root {
+  --color1: rgba(235, 235, 255, 100%);
+  --color1a: rgba(235, 235, 255, 65%);
+  --color2: rgba(0, 0, 70, 100%);
+  --color3: rgba(130, 130, 255, 100%);
+  --color4: rgba(75, 75, 255, 100%);
+  --accent-color: rgba(195, 255, 0, 100%);
+  --button-background: linear-gradient(var(--color4), var(--color3), var(--color2));
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, .8);
+}
+
+*, 
+::before, 
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: radial-gradient(40vw 50vh at center, var(--color3), var(--color2) );
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color1);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+
+#input-container {
+  background: var(--color1a);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 650px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0);
+}
+
+#input-container p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#text-input {
+  font-size: 1.2rem;
+  padding: .5rem;
+  border: 1px solid rgba(0, 0, 0, 50%)
+}
+
+#text-input:focus {
+  outline: 1px solid var(--color4);
+}
+
+#check-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: .75rem;
+  border-radius: 18px;
+  border: none;
+  background: var(--button-background);
+  box-shadow: 0px 0px 8px var(--color2);
+  color: var(--color1);
+  text-shadow: var(--text-shadow);
+}
+
+#check-btn:hover {
+  transform: scale(1.03);
+  background-image: linear-gradient(transparent, transparent, var(--color2));
+}
+
+#check-btn:active {
+  background-image: var(--button-background);
+}
+
+#result {
+  margin: 3% 20%;
+  width: 50%;
+  border: 3px solid var(--color2);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 5px 2px var(--accent-color);
+}
+
+.hide {
+  display: none;
+}
+
+#hint-box {
+  background: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  max-width: 475px;
+  box-shadow: 10px 8px 3px var(--color2);
+  border: 2px solid var(--color2);
+  margin-top: 30px;
+}
+
+#hint-box em {
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+
+#hint-box span {
+  background: rgba(245, 245, 245);
+  border-radius: 100%;
+  padding: .2rem;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}

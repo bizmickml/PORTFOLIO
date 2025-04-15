@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent Marker" rel="stylesheet">
+    <link href="005_survey_form.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
+    <h1 id="title">Mike Lamondy's Survery Page</h1>
+    <p id="description">Follow along with me on my journey to becoming a full stack developer!</p>
+    <form id="survey-form" method="post" action='https://survey-form.freecodecamp.rocks/'>
+<! -- for contact info section -->      
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label class="contact-info-label" id="name-label">Name<input class="contact-info" id="name" type="text" required placeholder="Tom Ally"></label>
+        <label class="contact-info-label" id="email-label">Email<input class="contact-info" id="email" type="email" required placeholder="tom@gmail.com"></label>
+        <label class="contact-info-label" id="number-label">Age<input class="contact-info" id="number" type="number" required min="13" max="120" placeholder="13+"></label>
+      </fieldset>
+<! -- for radio buttons -->
+      <fieldset>
+        <legend>Are you a musician?</legend>
+        <label><input class="inline" type="radio" name="musician" value="Yes" /> Yes</label>
+        <label><input  class="inline"type="radio" name="musician" value="No" /> No</label>
+        <label><input  class="inline"type="radio" name="musician" value="Interested" /> Interested in learning</label>
+      </fieldset>
+<! -- for drop down -->
+      <fieldset>
+        <legend>How did you hear about me?</legend>
+        <select id="dropdown">
+          <option disabled>(select one)</option>
+          <option value="Friend" >Friend</option>
+          <option value="Relative" >Relative</option>
+          <option value="Work" >Work</option>
+          <option value="Conference" >Conference</option>
+        </select>
+      </fieldset>
+<! -- for checkboxes -->
+      <fieldset>
+        <legend>Do you play any of these instruments?</legend>
+        <label><input class="inline" type="checkbox" value="none"></input> none</label>
+        <label><input class="inline" type="checkbox" value="Guitar"></input> Guitar</label>
+        <label><input class="inline" type="checkbox" value="Saxophone"></input> Saxophone</label>
+        <label><input class="inline" type="checkbox" value="Piano"></input> Piano</label>
+        <label><input class="inline" type="checkbox" value="Drums"></input> Drums</label>
+      </fieldset>
+<! -- for text area -->
+      <fieldset>
+        <legend>Tell me a little about yourself.</legend>
+        <textarea placeholder="I am awesome, yes I am!"></textarea>
+      </fieldset>
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+</html>

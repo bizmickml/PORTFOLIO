@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+  font-family: "ibm plex mono", sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 150vh;
+}
+
+/* Navbar settings */
+
+#navbar {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 350px;
+  min-height: 150vh;
+  background-color: rgb(125 50 85);
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar-header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1 {
+  padding-bottom: 0;
+  margin-bottom: -10px;
+}
+
+#navbar p {
+  padding: unset;
+}
+
+.nav-links-list {
+  margin-top: 50px;
+}
+
+table, th, td {
+  display: table;
+  width: 100%;
+  border: 1px solid white;
+  border-collapse: collapse;
+  border-right: none;
+  border-left: none;
+}
+
+a {
+  display: block;
+  height: 50px;
+  font-size: 24px;
+  text-decoration: none;
+  text-align: right;
+  color: white;
+  padding-right: 20px;
+  Line-height: 50px;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, .5)
+}
+
+/* Main-Doc section */
+
+main { 
+  margin: 15px;
+  margin-left: 365px;
+  min-width: 350px;
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 75px;
+  margin-top: 50px;
+}
+
+.divider {
+  border-bottom: 1px solid black;
+  margin: none;
+  padding: none;
+}
+
+p, li {
+  padding-left: 2rem;
+  line-height: 1.4rem;
+}
+
+p:not(.code), ul {
+  margin-bottom: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.block-underline {
+  display: inline-block;
+  width: 6em;
+  border-bottom: 1px solid black;
+}
+
+/* Code style */
+
+code {
+  background-color: rgba(200, 200, 200, .5);
+  padding: 4px;
+  color: rgba(0, 0, 0, .65);
+}
+
+@media (max-width: 768px) {
+
+  #navbar {
+    bottom: 150px;
+    width: 100vw;
+    min-height: unset;
+    height: 225px;
+    overflow-y: scroll;
+  }
+
+  #navbar p {
+    padding-bottom: 0;
+    margin-top: .5rem;
+  }
+
+  .nav-links-list {
+    margin-top: -20px;
+  }
+
+  h1, #navbar-header {
+    margin-top: 5px;
+  }
+
+  a {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  main {
+    margin-left: 15px;
+    margin-top: 245px;
+  }
+
+}

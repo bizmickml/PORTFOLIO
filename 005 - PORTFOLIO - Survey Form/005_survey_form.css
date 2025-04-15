@@ -1,0 +1,87 @@
+body {
+  font-family: "permanent marker";
+  color: white;
+  background-image: url(https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg?t=st=1737988272~exp=1737991872~hmac=b63cfa51f51dca3f58bf8e1f5432dc352921d096e8fe327e85df835baed8846b&w=1380);
+  background-size: cover; 
+}
+
+h1, p {
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+form {
+  width: 60vw;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 100px auto;
+  background-color: rgba(0, 225, 255, .65);
+  padding: 1em;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding-bottom: 40px;
+}
+
+fieldset {
+  border: none;
+  margin-top: 20px;
+}
+
+legend {
+  font-size: 30px;
+  margin-left: -10px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+input {
+  font-size: 20px;
+}
+
+.contact-info {
+  display: block;
+}
+
+input, select {
+  width: 100%;
+}
+
+.inline {
+  width: unset;
+}
+
+select {
+  min-height: 30px;
+}
+
+.contact-info-label {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 50px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 24px;
+  background: rgba(0, 0, 0, .50);
+  color: white;
+}

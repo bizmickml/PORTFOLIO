@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 
+selling points container should be displayed as a grid 
+with icons on the left and info on the right
+*/
+
+/* products should be displayed with flexbox to show three distinct options */
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Anton", sans-serif;
+}
+
+body { 
+  background: rgb(235 255 245);
+}
+
+p {
+  font-family: "PT Serif", sans-serif;
+}
+
+@media (pefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Navbar settings ------------*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 8rem;
+  padding: 0 5rem 0 2.5rem;
+  background: rgb(25 125 25);
+}
+
+.logo-img {
+  height: 8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+header a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 800px;
+  max-width: 1200px;
+}
+
+
+/* OPT in section -------------*/
+
+h1 {
+  width: 100%;
+  font-size: 5rem;
+  align-self: center;
+}
+
+form {
+  margin-top: 1.2rem;
+}
+
+.opt-in label {
+  font-size: 1.8rem;
+}
+
+input {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+.submit-button {
+  padding: .5rem 2rem;
+  font-size: 2rem;
+  background: rgb(55 120 35);
+  color: white;
+  margin-left: 1.5rem;
+}
+
+
+/* Selling Points ------------------*/
+
+.usp-container {
+  display: flex;
+  width: 55vw;
+  max-width: 800px;
+  min-width: 350px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  padding: 2rem;
+  gap: 0 6rem
+}
+
+.material-icons {
+  width: 20%;
+  font-size: 70px;
+  color: rgb(22 155 50);
+  text-align: right;
+  line-height: 14rem;
+  
+}
+
+.usp {
+  width: 70%;
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: .1rem;
+
+}
+
+.usp p {
+  font-size: 1.6rem;
+}
+
+
+/* Video section "features" ---------- */
+
+#features {
+  margin-top: 6rem;
+  border: 2px solid rgb(22 155 50);
+  border-radius: 10px;
+  width: 55vw;
+  height: auto;
+  min-width: 350px;
+  max-width: 850px;
+  background: rgb(25 125 25);
+  padding: 2rem;
+}
+
+video {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Product Selection --------- */
+
+#product_select {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80vw;
+  min-width: 350px;
+  max-width: 1200px;
+  margin-top: 10rem;
+  gap: 0 6rem;
+}
+
+.product-option:hover {
+  box-shadow: 0 0 25px .05rem rgba(0, 0, 0, .5);
+  border: 1px solid black;
+  transform: scale(1.05)
+}
+
+#product_select div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: gray;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  height: 25vh;
+  width: 30%;
+  gap: 0;
+}
+
+.product-title {
+  display: block;
+  background: rgb(50 50 50);
+  padding: .7rem;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  border-radius: 3px;
+}
+
+.product-subtitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-selling-points {
+  display: block;
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+li {
+  margin-top: .2rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-family: "PT Serif", sans-serif;
+}
+
+.products button {
+  display: block;
+  margin-top: 1rem;
+  background: rgb(55 120 35);
+  color: white;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .5);
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+
+/* Footer section --------*/
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100vw;
+  background-color: rgba(105, 155, 105, .75);
+  height: 4vh;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  width: 30%;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  Justify-content: center;
+  align-items: center;
+  width: 70%;
+  gap: 0 6rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
