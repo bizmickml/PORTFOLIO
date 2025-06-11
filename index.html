@@ -10,114 +10,112 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="index.css" rel="stylesheet" type="text/css">
 </head>
+<body>
 
-  <body>
+  <header id="navbar">
+    <div class="header-img"><p id="header-img">_WEB_DEV.ml</p></div>
+    <a class="phone" id="phone" href="tel:5085587844">508-558-7844</a>
+    <nav>
+      <a id="about-link" href="#about">About</a>
+      <a id="projects-link" href="#projects">Projects</a>
+      <a id="contact-link" href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <header id="navbar">
-      <div class="header-img"><p id="header-img">_WEB_DEV.ml</p></div>
-      <a class="phone" id="phone" href="tel:5085587844">508-558-7844</a>
-      <nav>
+  <section id="welcome">
+    <div class="welcome-container">
+      <img 
+        class="hero-img" 
+        src="Images/MikeHero.png" 
+        alt="Smiling image of Mike"
+      />
+      <h1 class="headline">Need a Web Developer?</h1>
+      <p class="subheading" id="subtitle">I've got you!</p>
+    </div>
+  </section>
+
+  <section id="about">  <! ---- this element will establish a 3 column grid which will use the outer columns as spacing and the center column for content ---- >    
+      
+    <div class="head-wrap">  <! ---- head wrap is to create another two column grid for the header area of the content in this section ---- >          
+      <img 
+        src="Images/MikeOnMountain.jpg" 
+        alt="Selfie of Mike on top of Mount Monadnock in New Hampshire"
+      />
+      <h2 id="about-title" class="headline">My Journey From Master Carpenter to Web Developer</h2>
+    </div>
+
+    <article id="main-content">
+      <h2 class="subheading">Backstory - </h2>
+      <article id="backstory" class="text-content">
+        <p>When I was a young kid, my dad brought me to work one day and showed me how to smash out walls with a sledgehammer and a prybar. What kind of boy doesn’t love smashing things? I took my first swing and immediately knew it was going to be something I enjoyed.</p>
+        <p>Me and another teenage family member spent the rest of the day smashing and shoveling, telling jokes, and smashing and shoveling some more. I didn’t know it then, but what began that summer was a love for construction. </p>
+        <p>I spent years of my life learning music and trying to figure out what I wanted to do when I grew up. I tried college, sales, culinary arts and eventually ended up back in construction for a time. I started a business and learned framing and carpentry and managing people. Somewhere along that process I got married and had kids, we have 5! Now that I had a family to look after I had to consider the money I was making, and it wasn’t long before I took a management job. Sadly, the market condition of the industry at the time caused me to seek out an alternative to what I had been doing and it seemed like I could make more money being a project manager.</p>
+        <p>Taking on the role of a project manager was one of the easiest jobs I have ever had, and I did make more money, but there was something missing. I didn’t even realize it until we volunteered to help with a vacation bible school that our church was putting on. My job was to cut out big animal shapes from sheets of plywood that would later become backdrops for selfies. I still remember it like it was yesterday…. I was cutting the wood and there was a moment where I took a whiff and realized, “I actually miss the smell of freshly cut wood.” I told my wife who said, “why don’t you go back into business for yourself?”</p>
+        <p>Well, the rest is history. We birthed BizMick Construction in 2011 and never looked back. I guess I had to try all that other stuff before I could really discover that I loved to build things…more specifically I loved woodworking. I discovered I had an eye for quality and for fine detail. I took pride in my work like I never had before. It wasn’t long before the industry began to lead me to some very high-end clients which demanded the most stringent of tolerances.</p>
+        <hr />
+        <p class="block-quote">See, carpentry like most industries, has a tolerance. How much can we be off in either direction before it becomes too much?</p>
+        <hr />
+        <p>Now, I can boast that I’ve worked on projects ranging from small repairs to twenty-million-dollar, high-end, residential construction jobs; the kind of jobs you see featured in magazines. How have I had these amazing opportunities? The answer – tolerance. You see, as a finish carpenter, I’ve learned to only allow a tolerance of 1/32 of an inch. This makes the product I deliver not only good, not only better, but the best. Most people can’t even see 1/32” without a magnifying glass and a special measuring tool so to the naked eye my completed work seems to be without flaw. Now we all know that perfection isn’t possible, but we can certainly come ever so close.</p>
+        <p>To the BizMick family, 1/32” has become sort of a motto. Not only does tolerance apply to what we do but also how we do it. How do we carry ourselves? How do we interact with others? The concept of 1/32” affected my carpentry so much, it wasn’t long before the concept began to spill over into other areas. I began to ask myself, “what would my life look like if I applied the principle of 1/32” to everything?” Here it is: If 1/32 of an inch is barely visible then the amount we allow ourselves to be “off” or “out-of-line” must be scarcely perceived. The answer to the question looks like this; we treat people with dignity and respect. We are honest about schedules, successes, and mistakes. Our recommendations are based on what is best for the customer not the bottom line. We are transparent, trustworthy and truthful which makes us easy to work with. Our motto of 1/32” tolerance means the customer gets a superior job, a better experience and therefore, highly recommends us which benefits us. 1/32” means everyone wins!</p>
+      </article> 
+      <h2 class="subheading">A Need For Change - </h2>
+      <article id="change-section" class="text-content">
+        <p>write another section that talks about why I'm making this transition</p>
+      </article> 
+      <h2 class="subheading">What I'm Up To Now - </h2>
+      <article id="now-section" class="text-content">
+        <p>write another section that talks about what I'm up to now</p>
+      </article>
+      <h3 class="subheading">. . . more coming soon!</h3>
+      <! ------ write another section that talks about why I chose to transition from carpentry to web developement
+      write another section that talks about what I'm doing now --------------- >
+    </article>
+  </section>
+
+  <section id="projects">
+    <div class="section-heading headline">Check out some of my PROJECTS<div>
+    <div class="project-links-wrapper">
+    <a class="project-tile" href="">
+        <img class="project-image" src="https://www.dropbox.com/scl/fi/g0ryafacctxotqncvhgv0/survey.png?rlkey=95gesrqz8iosoowrwqxk3tmex&st=yu3ofc4b&raw=1" alt="screenshot of survey page" />
+        <p class="project-title">Survey Project</p>
+    </a>
+    <a class="project-tile" href="">
+        <img class="project-image" src="https://www.dropbox.com/scl/fi/ctgrd2vlio9z9356l3tmp/tribute.png?rlkey=ajy7u8amev3zqj3vf8t31a60c&st=pagwh9i3&raw=1" alt="screenshot of a tribute page" />
+        <p class="project-title">Tribute Page</p>
+    </a>
+    <a class="project-tile" href="">
+        <img class="project-image" src="https://www.dropbox.com/scl/fi/y54qf8x8j7xhmwwsphyew/tech_doc.png?rlkey=yl27f388a64nndowng3dqwrzj&st=niyc8l0w&raw=1" alt="screen shot of technical document page" />
+        <p class="project-title">Technical Document</p>
+    </a>
+    <a class="project-tile" href="">
+        <img class="project-image" src="https://www.dropbox.com/scl/fi/4adrcn5g1misck34jwlch/product.png?rlkey=k3f5ousnk1drlr2ybe1jtw3b1&st=girk6zi9&raw=1" alt="screenshot of a product order page" />
+        <p class="project-title">Product Page</p>
+    </a>
+    <div>
+  </section>
+
+  <section id="contact">
+    <h2 class="headline">Let's Work Together</h2>
+    <p class="subheading">Contact Me Today!</p>
+    <div id="contact-links">
+      <a id="profile-link" href="https://www.freecodecamp.org/M_Lamondy" target="_blank">My <span class="contact-icons"><img src="https://www.dropbox.com/scl/fi/e3ww15b3y6e9cyn1rxsk2/fcc_primary_large.jpg?rlkey=mdn47j739hxzk11w74h6ij288&st=70ebmo68&raw=1" /></span> Profile</a>
+      <a id="email-link" href="mailto:bizmickml@gmail.com"><span class="material-symbols-outlined">
+mail
+</span> E-mail Me</a>
+      <a id="phone-link" href="tel:5085587844"><span class="material-symbols-outlined">
+call
+</span> Call Me</a>
+    </div>
+  </section>
+
+  <footer>
+    <p id="copyright-statement">&#169 2025 Michael Lamondy | All Rights Reserved</p>
+    <nav id="navbar">
         <a id="about-link" href="#about">About</a>
         <a id="projects-link" href="#projects">Projects</a>
         <a id="contact-link" href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <section id="welcome">
-      <div class="welcome-container">
-        <img 
-          class="hero-img" 
-          src="Images/MikeGreenBackgrnd.png" 
-          alt="Image of Mike with green background"
-        />
-        <h1 class="headline">Need a Web Developer?</h1>
-        <p class="subheading" id="subtitle">I've got you!</p>
-      </div>
-    </section>
-
-    <section id="about">  <! ----- this element will establish a 3 column grid which will use the outer columns as spacing and the center column for content ------------ >    
-        
-      <div class="head-wrap">  <! --------- head wrap is to create another two column grid for the header area of the content in this section ----------- >          
-        <img 
-          src="Images/MikeOnMountain.jpg" 
-          alt="Selfie of Mike on top of Mount Monadnock in New Hampshire"
-          loading="lazy"
-        />
-        <h2 id="about-title" class="headline">My Journey From Master Carpenter to Web Developer</h2>
-      </div>
-
-      <article id="main-content">
-        <h2 class="subheading">Backstory - </h2>
-        <article id="backstory" class="text-content">
-          <p>When I was a young kid, my dad brought me to work one day and showed me how to smash out walls with a sledgehammer and a prybar. What kind of boy doesn’t love smashing things? I took my first swing and immediately knew it was going to be something I enjoyed.</p>
-          <p>Me and another teenage family member spent the rest of the day smashing and shoveling, telling jokes, and smashing and shoveling some more. I didn’t know it then, but what began that summer was a love for construction. </p>
-          <p>I spent years of my life learning music and trying to figure out what I wanted to do when I grew up. I tried college, sales, culinary arts and eventually ended up back in construction for a time. I started a business and learned framing and carpentry and managing people. Somewhere along that process I got married and had kids, we have 5! Now that I had a family to look after I had to consider the money I was making, and it wasn’t long before I took a management job. Sadly, the market condition of the industry at the time caused me to seek out an alternative to what I had been doing and it seemed like I could make more money being a project manager.</p>
-          <p>Taking on the role of a project manager was one of the easiest jobs I have ever had, and I did make more money, but there was something missing. I didn’t even realize it until we volunteered to help with a vacation bible school that our church was putting on. My job was to cut out big animal shapes from sheets of plywood that would later become backdrops for selfies. I still remember it like it was yesterday…. I was cutting the wood and there was a moment where I took a whiff and realized, “I actually miss the smell of freshly cut wood.” I told my wife who said, “why don’t you go back into business for yourself?”</p>
-          <p>Well, the rest is history. We birthed BizMick Construction in 2011 and never looked back. I guess I had to try all that other stuff before I could really discover that I loved to build things…more specifically I loved woodworking. I discovered I had an eye for quality and for fine detail. I took pride in my work like I never had before. It wasn’t long before the industry began to lead me to some very high-end clients which demanded the most stringent of tolerances.</p>
-          <hr />
-          <p class="block-quote">See, carpentry like most industries, has a tolerance. How much can we be off in either direction before it becomes too much?</p>
-          <hr />
-          <p>Now, I can boast that I’ve worked on projects ranging from small repairs to twenty-million-dollar, high-end, residential construction jobs; the kind of jobs you see featured in magazines. How have I had these amazing opportunities? The answer – tolerance. You see, as a finish carpenter, I’ve learned to only allow a tolerance of 1/32 of an inch. This makes the product I deliver not only good, not only better, but the best. Most people can’t even see 1/32” without a magnifying glass and a special measuring tool so to the naked eye my completed work seems to be without flaw. Now we all know that perfection isn’t possible, but we can certainly come ever so close.</p>
-          <p>To the BizMick family, 1/32” has become sort of a motto. Not only does tolerance apply to what we do but also how we do it. How do we carry ourselves? How do we interact with others? The concept of 1/32” affected my carpentry so much, it wasn’t long before the concept began to spill over into other areas. I began to ask myself, “what would my life look like if I applied the principle of 1/32” to everything?” Here it is: If 1/32 of an inch is barely visible then the amount we allow ourselves to be “off” or “out-of-line” must be scarcely perceived. The answer to the question looks like this; we treat people with dignity and respect. We are honest about schedules, successes, and mistakes. Our recommendations are based on what is best for the customer not the bottom line. We are transparent, trustworthy and truthful which makes us easy to work with. Our motto of 1/32” tolerance means the customer gets a superior job, a better experience and therefore, highly recommends us which benefits us. 1/32” means everyone wins!</p>
-        </article> 
-        <h2 class="subheading">A Need For Change - </h2>
-        <article id="change-section" class="text-content">
-          <p>write another section that talks about why I'm making this transition</p>
-        </article> 
-        <h2 class="subheading">What I'm Up To Now - </h2>
-        <article id="now-section" class="text-content">
-          <p>write another section that talks about what I'm up to now</p>
-        </article>
-        <h3 class="subheading">. . . more coming soon!</h3>
-        <! ------ write another section that talks about why I chose to transition from carpentry to web developement
-        write another section that talks about what I'm doing now --------------- >
-      </article>
-    </section>
-
-    <section id="projects">
-      <div class="section-heading headline">Check out some of my PROJECTS<div>
-      <div class="project-links-wrapper">
-      <a class="project-tile" href="">
-          <img class="project-image" src="https://www.dropbox.com/scl/fi/g0ryafacctxotqncvhgv0/survey.png?rlkey=95gesrqz8iosoowrwqxk3tmex&st=yu3ofc4b&raw=1" alt="screenshot of survey page" />
-          <p class="project-title">Survey Project</p>
-      </a>
-      <a class="project-tile" href="">
-          <img class="project-image" src="https://www.dropbox.com/scl/fi/ctgrd2vlio9z9356l3tmp/tribute.png?rlkey=ajy7u8amev3zqj3vf8t31a60c&st=pagwh9i3&raw=1" alt="screenshot of a tribute page" />
-          <p class="project-title">Tribute Page</p>
-      </a>
-      <a class="project-tile" href="">
-          <img class="project-image" src="https://www.dropbox.com/scl/fi/y54qf8x8j7xhmwwsphyew/tech_doc.png?rlkey=yl27f388a64nndowng3dqwrzj&st=niyc8l0w&raw=1" alt="screen shot of technical document page" />
-          <p class="project-title">Technical Document</p>
-      </a>
-      <a class="project-tile" href="">
-          <img class="project-image" src="https://www.dropbox.com/scl/fi/4adrcn5g1misck34jwlch/product.png?rlkey=k3f5ousnk1drlr2ybe1jtw3b1&st=girk6zi9&raw=1" alt="screenshot of a product order page" />
-          <p class="project-title">Product Page</p>
-      </a>
-      <div>
-    </section>
-
-    <section id="contact">
-      <h2 class="headline">Let's Work Together</h2>
-      <p class="subheading">Contact Me Today!</p>
-      <div id="contact-links">
-        <a id="profile-link" href="https://www.freecodecamp.org/M_Lamondy" target="_blank">My <span class="contact-icons"><img src="https://www.dropbox.com/scl/fi/e3ww15b3y6e9cyn1rxsk2/fcc_primary_large.jpg?rlkey=mdn47j739hxzk11w74h6ij288&st=70ebmo68&raw=1" /></span> Profile</a>
-        <a id="email-link" href="mailto:bizmickml@gmail.com"><span class="material-symbols-outlined">
-mail
-</span> E-mail Me</a>
-        <a id="phone-link" href="tel:5085587844"><span class="material-symbols-outlined">
-call
-</span> Call Me</a>
-      </div>
-    </section>
-
-    <footer>
-      <p id="copyright-statement">&#169 2025 Michael Lamondy | All Rights Reserved</p>
-      <nav id="navbar">
-          <a id="about-link" href="#about">About</a>
-          <a id="projects-link" href="#projects">Projects</a>
-          <a id="contact-link" href="#contact">Contact</a>
-      </nav>
-    </footer>
-    <script src="index.js"></script>
-  </body>
+    </nav>
+  </footer>
+  <script src="index.js"></script>
+</body>
 </html>
