@@ -1,0 +1,9 @@
+
+@keyframes wiggle {
+  0% {
+    display: none;
+  }
+  5% {
+    display: unset;
+  }
+}

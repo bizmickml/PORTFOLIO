@@ -7,6 +7,7 @@
 
   --black: rgb(18, 19, 15);
   --white: rgb(245, 246, 244);
+  --white-trans: rgba(245, 246, 244, .75);
 
   --green-light: rgb(209, 243, 206);
   --green: rgb(96, 212, 80);
@@ -28,16 +29,6 @@
   --paragraph: "Montserrat", sans-serif;
 
  /* ----  End Font Scheme  ---- */
-
-  --color1: rgb(3.14%, 15.29%, 0%);
-  --color1a: rgba(3.14%, 15.29%, 0%, 75%);
-  --color2: rgb(5%, 85%, 25%);
-  --color3: rgb(6.67%, 70.98%, 89.41%);
-  --color4: rgb(90.2%, 90.2%, 90.2%);
-  --color4a: rgba(90.2%, 90.2%, 90.2%, .5);
-  --color5: rgb(29.80%, 37.25%, 41.96%);
-  --color6: rgb(0%, 10%, 0%);
-  --color7: rgb(18%, 25%, 18%);
 }
 
 html {
@@ -55,6 +46,16 @@ html {
 body {
   width: 100%;  /*  ---- IMPORTANT ---- Added the overflow property to keep items in nav bar from flowing out of the screen, then changed header width to 100% INSTEAD of 100vw which brought the margins inside of the page scroll bar. ----------------------------------------  */
   overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(110% 100% at 0% 0% , var(--yellow-light) 12.5%, var(--blue), var(--blue-dark) 90%);
+  z-index: -1;
 }
 
 .headline {
@@ -75,22 +76,22 @@ header {
   flex-wrap: nowrap;
   width: 100%;
   height: 8rem;
-  background: linear-gradient(
-    var(--blue) 91%,
-    var(--blue-dark) 
-  );
   padding:.25rem 3rem .9rem 3rem;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 1rem var(--blue-dark);
+  background: radial-gradient(110% 100% at 0% 0% , var(--yellow-light) 12.5%, var(--blue), var(--blue-dark) 90%);
+  background-size: 100vw 100vh;
+  z-index: 2;
 }
 
 .header-img {
-  color: white;
+  color: var(--yellow);
   font-family: var(--headline);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, .75);
-  font-size: 4rem;
+  font-size: 3.25rem;
   justify-self: left;
+  background: var(--yellow-dark);
+  padding: 1.55rem;
+  border-radius: 100%;
 }
 
 header a:hover {
@@ -119,91 +120,131 @@ header a {
   text-decoration: none;
   font-family: var(--subheading);
   font-size: 2.25rem;
-  color: white;
+  color: var(--yellow);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, .75);
+  font-weight: bold;
 }
 
 /* ---- End Navbar ---- */
 /* ---- Start Welcome Section ----*/
 
-#welcome {
+section#welcome {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 8rem);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    155deg, 
-    var(--blue-dark) 35%,
-    var(--blue)
-    );
-  margin-top: -.7rem; /* ---- added margin top to fix the gradient at the bottom of the navbar which appeared to be an ugly red color between the bright green of the navbar and the dark green of the welcome section ---- */
+  padding: 0 3vw 0;
 }
 
-.welcome-container {
+#headline-container {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-container {
+  border-radius: 1rem;
+  margin-left: 3rem;
+}
+
+h1 {
+  width: 100%;
+  font-size: 6.5rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 1px 4px var(--black);
+}
+
+#img-container {
+  position: relative;
+}
+
+#welcome-img {
+  position: absolute;
+  width: 40rem;
+}
+
+#welcome-gif {
+  position: relative;
+  width: 40rem;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 15000ms;
+  animation-iteration-count: infinite;
 }
 
 .hero-img {
   height: 35vh;
   object-fit: contain;
-  border-radius: 20px;
-}
-
-h1 {
-  font-size: 6rem;
-  margin: 2rem 0 0 0;
-  color: var(--white);
-  text-align: center;
+  border-radius: 45%;
 }
 
 #subtitle {
+  display: absolute;
   font-size: 3rem;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: center;
+  font-weight: 800;
   color: var(--yellow);
+  text-shadow: 1px 1px var(--black);
+  transform-origin: top-left;
+  rotate: 23deg; 
+  translate: 6rem -30rem;
 }
 
 /* ---- End Welcome Section ---- */
 /* ---- Start ABOUT section ---- */
 
+.underline {
+  text-decoration: underline;
+}
+
+.key-point {
+  background: var(--blue);
+  padding: 1.35rem;
+  border-radius: .55rem;
+  margin: 1rem 0;
+}
+
 #about {
   width: 100%;
-  background: white;
   padding: 5vh 0 5vh 0;
   display: grid;
   grid-template-columns: minmax(3%, calc(calc(100% - 1249px) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 1249px) / 2));  /* ---- this is the grid that establishes content position on the page ---- */
-  grid-template-rows: min-content min-content;
-  row-gap: 1rem;
+  grid-template-rows: min-content, min-content;
 }
 
 #about .head-wrap {
-  /* ---- need to change this to a flexbox so that the image doesn't get too small too quickly when downsizing the screen width ---- */
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: row;
-  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
   gap: 2rem;
+  background: var(--white-trans);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 #about img {
   width: 33%;
   height: fit-content;
   border-radius: 20px;
-  box-shadow: 1px 1px 5px var(--color1a);
+  box-shadow: 1px 1px 3px var(--blue-dark);
 }
 
 #about-title {
-  width: 65%;
+  width: 60%;
   font-size: 6rem;
-  color: var(--color7);
-  text-shadow: 4px 4px 5px var(--color3);
+  color: var(--blue-dark);
+  text-shadow: 4px 4px 5px var(--blue-light);
 }
 
 #about #main-content {
@@ -213,6 +254,10 @@ h1 {
   grid-template-columns: 3fr;
   grid-template-rows: repeat(7, min-content);
   row-gap: 2rem;
+  background: var(--white-trans);
+  padding: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 #about .subheading {
@@ -223,7 +268,7 @@ h1 {
 #about .text-content {
   column-width: 24rem;
   text-align: justify;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: var(--paragraph);
 }
 
@@ -232,10 +277,10 @@ h1 {
 }
 
 .block-quote {
-  color: var(--color3);
+  color: var(--yellow);
   font-style: italic;
   font-weight: bold;
-  text-shadow: .5px .5px 1px var(--color1a);
+  text-shadow: .5px .5px 1px var(--yellow-dark);
   padding: 1.4rem;
 }
 
@@ -247,6 +292,10 @@ h1 {
   content: ' "'
 }
 
+hr {
+  border-color: var(--green-dark)
+}
+
 hr:first-of-type {
   margin-top: 1.4rem;
 }
@@ -256,32 +305,88 @@ hr:nth-of-type(2) {
 }
 
 /* ---- End About section ---- */
+/* ---- Start Scroll Stopper ---- */
+
+.scroll-stopper {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--yellow);
+  color: var(--green-dark);
+  box-shadow: 0 0 5px var(--yellow-dark);
+  text-align: center;
+  overflow: hidden;
+  font-family: var(--subheading);
+}
+
+.scroll-stopper h3 {
+  font-size: 2.75rem;
+}
+
+.scroll-stopper ul {
+  position: relative;
+  left: 100vw;
+  font-size: 2.5rem;
+  margin: 4rem 0;
+  font-family: var(--paragraph);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.scroll-stopper ul li {
+  position: absolute;
+  left: 0;
+  width: max-content;
+  list-style: none;
+}
+
+.scroll-stopper ul li {
+  animation: scroll-left 8250ms infinite linear;
+}
+
+.scroll-stopper ul li i {
+  font-size: .75rem;
+  line-height: 2.5rem;
+  vertical-align: middle;
+  color: var(--yellow-dark)
+}
+
+/* ---- End Scroll Stopper ---- */
 /* ---- Start PROJECTS section ---- */
 
 #projects {
   display: grid;
   grid-template-columns: minmax(3%, calc(calc(100% - 1249px) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 1249px) / 2));  /* ---- this grid layout establishes a grid setup to allow for two outer columns as spacers, and a center column for content NOTE: need another grid container in the center for the content blocks themselves ---- */  
-  background: radial-gradient(circle farthest-corner at center, var(--color3), var(--color5));
+  grid-template-rows: max-content, max-content;
   padding: 3vh 0 3vh 0;
 }
 
 .section-heading {
   grid-column: 2 / 3;
+  grid-row: 1 / 2;
   font-size: 5rem;
-  color: white;
-  text-shadow: 1px 1px 3px var(--color1a);
+  color: var(--white);
+  text-shadow: 1px 1px 3px var(--black);
 }
 
 .project-links-wrapper {
   grid-column: 2 / 3;
+  grid-row: 2 / 3;
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-tile {
-  column-width: 1fr;
+  max-width: 350px;
+  min-width: 125px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,31 +394,42 @@ hr:nth-of-type(2) {
   gap: 0;
   height: min-content;    /* ---- this solved my problem of having the conatiner show up as a different size than the content. ---- */
   text-decoration: none;
-  box-shadow: 0 0 4px var(--color1a);
+  box-shadow: 0 0 3px var(--white-trans);
   border-radius: 5px;
-  border: 1px solid var(--color4a);
   transition: transform .4s ease-out;
+  margin: 2rem;
 }
 
 .project-tile:hover {
   transform: scale(1.1);
 }
 
-.project-tile img {
+.project-image {
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
 
-.project-tile p {
-  background: linear-gradient(white, var(--color6)8%, var(--color6)85%, var(--color5));
-  color: var(--color3);
+.project-title {
+  background: linear-gradient(var(--blue-light), var(--blue)8%, var(--blue)85%, var(--blue-dark));
+  color: var(--white);
   font-weight: bold;
   font-size: 2.3rem;
   font-family: var(--subheading);
   text-align: center;
-  border-radius: 0 0 5px 5px;
   width: 100%;
   padding: 3px 0 3px 0;
+}
+
+.project-description {
+  background: var(--blue-dark);
+  color: var(--blue);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  padding: .5rem;
+  font-family: var(--paragraph);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* ---- End Projects section ---- */
@@ -321,20 +437,18 @@ hr:nth-of-type(2) {
 
 #contact {
   width: 100%;
-  height: calc(100vh - 16rem);
+  height: calc(100vh - 12rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: var(--color7);
 }
 
 #contact h2 {
   font-size: 7rem;
   margin: 2rem 0 0 0;
-  color: var(--color4);
+  color: var(--white);
   text-align: center;
-  text-shadow: 1px 1px 2px var(--color1a);
+  text-shadow: 1px 1px 2px var(--blue-dark);
 }
 
 #contact .subheading {
@@ -342,12 +456,12 @@ hr:nth-of-type(2) {
   font-weight: bold;
   margin-top: 0;
   text-align: center;
-  color: var(--color2);
-  text-shadow: 1px 1px 2px var(--color1a);
+  color: var(--yellow);
+  text-shadow: 1px 1px 2px var(--yellow-dark);
 }
 
 #contact-links {
-  margin: 6rem 3vw 0 3vw;
+  margin: 15rem 3vw 0 3vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -363,9 +477,6 @@ hr:nth-of-type(2) {
   justify-content: center;
   text-decoration: none;
   color: var(--color4);
-  font-size: 3.2rem;
-  line-height: 5rem;
-  gap: 1rem;
   transition: transform .4s ease-out;  /* ---- this is causing a transition back to normal after behing hovered.  The hover effect by itself is too choppy. ---- */
 }
 
@@ -374,13 +485,22 @@ hr:nth-of-type(2) {
 }
 
 #contact img {
-  margin-bottom: -5px;
-  height: 30px;
+  height: 3.75rem;
   width: auto;
 }
 
-#contact .contact-icons {
-  line-height: 5rem;
+#contact-link-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 4rem;
+}
+
+#contact-link-container img {
+  height: 6rem;
 }
 
 /* ---- End contact section ---- */
@@ -391,14 +511,14 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 8rem;
-  padding: 3vh 5vw 1vh 5vw;
-  background: linear-gradient(var(--color7), var(--color2) 8%, var(--color7)8%);
+  padding: 1rem 5vw 1rem 5vw;
+  border-top: 1px solid var(--white)
+  /* background: linear-gradient(var(--color7), var(--color2) 8%, var(--color7)8%); */
 }
 
 footer p {
-  font-size: 1.5rem;
-  color: var(--color4);
+  font-size: 1rem;
+  color: var(--white);
 }
 
 footer nav {
@@ -406,12 +526,12 @@ footer nav {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 footer a {
   text-decoration: none;
-  color: var(--color4);
+  color: var(--white);
 }
 
 /* ---- End footer section ---- */
@@ -453,3 +573,43 @@ footer a {
 }
 
 /* ---- End Media rules ---- */
+/* ---- Start animations ---- */
+
+@keyframes rotate {
+  10%, 15% {
+    transform: rotate(90deg); 
+  }
+  25%, 30% {
+    transform: rotate(-45deg);
+  }
+  35%, 40% {
+    transform: rotate(180deg);
+  }
+  50%, 55% {
+    transform: rotate(-90deg); 
+  }
+  65%, 70% {
+    transform: rotate(240deg);
+  }
+  80%, 85% {
+    transform: rotate(-240deg);
+  }
+  95% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes slide-up {
+  0% {
+    translate: 0 ;
+  }
+}
+
+@keyframes scroll-left {
+  100% {
+    translate: -3000px 0;
+  }
+}
+
+/* ---- End animations ---- */
