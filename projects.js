@@ -1,5 +1,33 @@
 const projects = [
   {
+    linkHref: "https://bizmickml.github.io/front_end_practice/Bookkeeping%20Table/index.html",
+    imgSrc: "Images/cssAnimations.png",
+    title: "CSS Animations",
+    description: "",
+    note: ""  
+  },  
+  {
+    linkHref: "https://bizmickml.github.io/front_end_practice/CSS%20Animations/animations.html",
+    imgSrc: "Images/cssAnimations.png",
+    title: "CSS Animations",
+    description: "",
+    note: ""  
+  },  
+  {
+    linkHref: "https://bizmickml.github.io/front_end_practice/Gradients/gradients.html",
+    imgSrc: "Images/gradients.png",
+    title: "Practicing Gradients",
+    description: "",
+    note: ""  
+  },  
+  {
+    linkHref: "https://bizmickml.github.io/front_end_practice/themePractice/sample_theme.html",
+    imgSrc: "Images/sample_theme.png",
+    title: "Theme Practice",
+    description: "",
+    note: ""  
+  },  
+  {
     linkHref: "rpgCreatureSearch/index.html",
     imgSrc: "Images/rpgCreatureSearch.png",
     title: "RPG Creature Search",

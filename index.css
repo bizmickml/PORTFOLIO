@@ -40,7 +40,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-margin-top: 8rem;  /* -------- added this because of the sticky nav bar clicking on a scroll navbar link made the section scroll to the top of the page (behind the sticky nav bar) ------------- */
+  scroll-margin-top: 12rem;  /* -------- added this because of the sticky nav bar clicking on a scroll navbar link made the section scroll to the top of the page (behind the sticky nav bar) ------------- */
 }
 
 body {
@@ -75,32 +75,33 @@ header {
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-  height: 8rem;
+  height: 12rem;
   padding:.25rem 3rem .9rem 3rem;
   position: sticky;
   top: 0;
   background: radial-gradient(110% 100% at 0% 0% , var(--yellow-light) 12.5%, var(--blue), var(--blue-dark) 90%);
   background-size: 100vw 100vh;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header-img {
   color: var(--yellow);
   font-family: var(--headline);
-  font-size: 3.25rem;
+  font-size: 4.5rem; 
   justify-self: left;
   background: var(--yellow-dark);
-  padding: 1.55rem;
+  padding: 2rem;
   border-radius: 100%;
 }
 
 header a:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 header.phone {
   justify-self: center;
   text-align: center;
+  flex-wrap: nowrap;
   transition: transform .4s ease-out;
 }
 
@@ -110,7 +111,7 @@ header nav {
   justify-content: right;
   justify-self: flex-end;
   flex-wrap: wrap;
-  column-gap: 4rem;
+  column-gap: 6rem;
   transition: transform .4s ease-out;
 }
 
@@ -119,7 +120,7 @@ header nav {
 header a {
   text-decoration: none;
   font-family: var(--subheading);
-  font-size: 2.25rem;
+  font-size: 3.5rem;
   color: var(--yellow);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, .75);
   font-weight: bold;
@@ -130,7 +131,7 @@ header a {
 
 section#welcome {
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 12rem); 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -140,7 +141,7 @@ section#welcome {
 }
 
 #headline-container {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -156,7 +157,7 @@ section#welcome {
 
 h1 {
   width: 100%;
-  font-size: 6.5rem;
+  font-size: 10rem;
   color: var(--white);
   text-align: center;
   text-shadow: 1px 1px 4px var(--black);
@@ -168,12 +169,12 @@ h1 {
 
 #welcome-img {
   position: absolute;
-  width: 40rem;
+  width: 60rem;
 }
 
 #welcome-gif {
   position: relative;
-  width: 40rem;
+  width: 60rem;
   animation-name: rotate;
   animation-timing-function: linear;
   animation-duration: 15000ms;
@@ -181,20 +182,20 @@ h1 {
 }
 
 .hero-img {
-  height: 35vh;
+  height: 50rem;
   object-fit: contain;
   border-radius: 45%;
 }
 
 #subtitle {
   display: absolute;
-  font-size: 3rem;
+  font-size: 4.75rem;
   font-weight: 800;
   color: var(--yellow);
   text-shadow: 1px 1px var(--black);
   transform-origin: top-left;
   rotate: 23deg; 
-  translate: 6rem -30rem;
+  translate: 7rem -45rem;
 }
 
 /* ---- End Welcome Section ---- */
@@ -213,9 +214,9 @@ h1 {
 
 #about {
   width: 100%;
-  padding: 5vh 0 5vh 0;
+  padding: .5vh 0 5vh 0;
   display: grid;
-  grid-template-columns: minmax(3%, calc(calc(100% - 1249px) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 1249px) / 2));  /* ---- this is the grid that establishes content position on the page ---- */
+  grid-template-columns: minmax(3%, calc(calc(100% - 160rem) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 160rem) / 2));  /* ---- this is the grid that establishes content position on the page ---- */
   grid-template-rows: min-content, min-content;
 }
 
@@ -242,7 +243,7 @@ h1 {
 
 #about-title {
   width: 60%;
-  font-size: 6rem;
+  font-size: 8rem;
   color: var(--blue-dark);
   text-shadow: 4px 4px 5px var(--blue-light);
 }
@@ -251,7 +252,7 @@ h1 {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: 3fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(7, min-content);
   row-gap: 2rem;
   background: var(--white-trans);
@@ -261,14 +262,14 @@ h1 {
 }
 
 #about .subheading {
-  font-size: 2.3rem;
+  font-size: 3.5rem;
   font-weight: bold;
 }
 
 #about .text-content {
-  column-width: 24rem;
+  column-width: 35rem;
   text-align: justify;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-family: var(--paragraph);
 }
 
@@ -323,13 +324,13 @@ hr:nth-of-type(2) {
 }
 
 .scroll-stopper h3 {
-  font-size: 2.75rem;
+  font-size: 4rem;
 }
 
 .scroll-stopper ul {
   position: relative;
   left: 100vw;
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin: 4rem 0;
   font-family: var(--paragraph);
   display: flex;
@@ -346,12 +347,11 @@ hr:nth-of-type(2) {
 }
 
 .scroll-stopper ul li {
-  animation: scroll-left 8250ms infinite linear;
+  animation: scroll-left 10587.5ms infinite linear;
 }
 
 .scroll-stopper ul li i {
-  font-size: .75rem;
-  line-height: 2.5rem;
+  font-size: 1.2rem;
   vertical-align: middle;
   color: var(--yellow-dark)
 }
@@ -361,7 +361,7 @@ hr:nth-of-type(2) {
 
 #projects {
   display: grid;
-  grid-template-columns: minmax(3%, calc(calc(100% - 1249px) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 1249px) / 2));  /* ---- this grid layout establishes a grid setup to allow for two outer columns as spacers, and a center column for content NOTE: need another grid container in the center for the content blocks themselves ---- */  
+  grid-template-columns: minmax(3%, calc(calc(100% - 180rem) / 2)) minmax(min-content, 3fr) minmax(3%, calc(calc(100% - 180rem) / 2));  /* ---- this grid layout establishes a grid setup to allow for two outer columns as spacers, and a center column for content NOTE: need another grid container in the center for the content blocks themselves ---- */  
   grid-template-rows: max-content, max-content;
   padding: 3vh 0 3vh 0;
 }
@@ -369,7 +369,7 @@ hr:nth-of-type(2) {
 .section-heading {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  font-size: 5rem;
+  font-size: 8rem;
   color: var(--white);
   text-shadow: 1px 1px 3px var(--black);
 }
@@ -385,8 +385,7 @@ hr:nth-of-type(2) {
 }
 
 .project-tile {
-  max-width: 350px;
-  min-width: 125px;
+  max-width: 55rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,7 +412,7 @@ hr:nth-of-type(2) {
   background: linear-gradient(var(--blue-light), var(--blue)8%, var(--blue)85%, var(--blue-dark));
   color: var(--white);
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 2.75rem;
   font-family: var(--subheading);
   text-align: center;
   width: 100%;
@@ -428,7 +427,7 @@ hr:nth-of-type(2) {
   text-align: center;
   padding: .5rem;
   font-family: var(--paragraph);
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -437,14 +436,14 @@ hr:nth-of-type(2) {
 
 #contact {
   width: 100%;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 18rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 #contact h2 {
-  font-size: 7rem;
+  font-size: 10rem;
   margin: 2rem 0 0 0;
   color: var(--white);
   text-align: center;
@@ -452,7 +451,7 @@ hr:nth-of-type(2) {
 }
 
 #contact .subheading {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: bold;
   margin-top: 0;
   text-align: center;
@@ -485,7 +484,7 @@ hr:nth-of-type(2) {
 }
 
 #contact img {
-  height: 3.75rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -500,7 +499,7 @@ hr:nth-of-type(2) {
 }
 
 #contact-link-container img {
-  height: 6rem;
+  height: 10rem;
 }
 
 /* ---- End contact section ---- */
@@ -517,7 +516,7 @@ footer {
 }
 
 footer p {
-  font-size: 1rem;
+  font-size: 2.25rem;
   color: var(--white);
 }
 
@@ -526,7 +525,7 @@ footer nav {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 
 footer a {
@@ -537,39 +536,45 @@ footer a {
 /* ---- End footer section ---- */
 /* ---- Start Media rules ---- */
 
-@media only screen and (width < 768px) {  /* ---- "only" - this is a keyword that prevents older browsers from trying to read the css within the media rule the older browser isn't compatible with the media rule and therefore will not read the css within the rule ---- */
-
-  /* ---- HEADER ---- */  
-  .header-img {
-    font-size: 3rem;
+@media only screen and (width < 1400px) { /* ---- "only" - this is a keyword that prevents older browsers from trying to read the css within the media rule the older browser isn't compatible with the media rule and therefore will not read the css within the rule ---- */
+  html {
+    font-size: 52.5%;
   }
-  header a {
-    font-size: 2rem;
+}
+
+@media only screen and (width < 1075px) {
+  html {
+    font-size: 42.5%;
+  }
+}
+
+@media only screen and (width < 875px) {  
+  html {
+    font-size: 37.5%;
+  }
+  #about .text-content {
+    column-width: 50rem;
+  }
+}
+
+@media only screen and (width < 750px) {
+  html {
+    font-size: 32.5%;
   }
   header nav {
-    column-gap: 2.2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    justify-self: flex-end;
+    transition: transform .4s ease-out;
   }
+}
 
-  /* ---- ABOUT ---- */
-  #about-title {
-    font-size: 4rem;
+@media only screen and (width < 650px) {
+  html {
+    font-size: 27.5%;
   }
-  #about article:not(.subheading) {
-    font-size: 1.4rem;
-  }
-  #about .subheading {
-    font-size: 1.8rem;
-  }
-
-  /* ---- PROJECTS ---- */
-  .project-links-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* ---- CONTACT ---- */
-  #contact h2 {
-    font-size: 6rem;
-  }    
 }
 
 /* ---- End Media rules ---- */
@@ -608,7 +613,7 @@ footer a {
 
 @keyframes scroll-left {
   100% {
-    translate: -3000px 0;
+    translate: -3850px 0;
   }
 }
 

@@ -6,7 +6,7 @@ const navBar = document.getElementById("navbar")
 const scrollStopper = document.getElementById("scroll-stopper")
 const listItems = [...scrollStopper.children[0].children[1].children]
 const multiplier = 2.75;
-const padding = 50 + 9.2;
+const padding = 60 + 12;
 let time = 0;
 
 listItems.forEach((el, index) => {
